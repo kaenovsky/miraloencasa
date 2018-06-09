@@ -1,0 +1,202 @@
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* La parte de arriba, logo, header y la ley */
+
+.header-logo {
+  padding: 0;
+  height: 16em;
+  background: white;
+  background-image: url(../assets/confeti.jpg);
+  margin: auto;
+}
+
+.header-logo img {
+  width: 25em;
+  padding-top: 2.5em;
+}
+
+.ley {
+  height: auto;
+  background: #2a90a9;
+  text-align: center;
+  color: white;
+}
+
+.ley h1{
+  font-style: italic;
+  font-size: 1.5em;
+  margin: auto;
+  padding-top: 0.4em;
+}
+
+.ley p{
+  width: 65%;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+  font-style: italic;
+}
+/*
+#second-line {
+  margin-top: -35px;
+} */
+
+/* ====== La parte de css grids ====== */
+
+.wrapper {
+  display: grid;
+  grid-gap: 1em;
+  /* dividio en 5 fracciones */
+  grid-template-columns: 1fr 2fr 3fr 3fr 1fr;
+  grid-template-rows:300px 480px;
+  grid-template-areas:
+  " . fixture hospitales twitter . "
+  " . requisitos hospitales twitter . "
+  ;
+}
+/*
+.col0 .col5 {
+  grid-area: .;
+}
+*/
+#fixture-col{
+  grid-area: fixture;
+}
+.col1 {
+  /* -ms-grid: auto; */
+
+  /* width: 30em; */
+  height: 5em;
+  margin-top: 1em;
+  text-align: left;
+}
+
+.fixture-arg {
+  background: none;
+  margin-top: -0.7em;
+}
+
+/*
+.fixture-arg img {
+  float: right;
+
+} */
+
+.col1 h4 {
+  color: #2a90a9;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.col1 p {
+  margin: 0;
+}
+
+.requisitos h4 {
+  margin-top: 3em;
+}
+
+/*
+.col1 li {
+  list-style-type: none;
+} */
+#hospitales-col{
+  grid-area: hospitales;
+}
+.col2 {
+  /* width: 30em; */
+
+  height: 5em;
+  background: #fff;
+  margin-top: 1em;
+}
+
+.col2 h2 {
+  color: #2a90a9;
+  text-align: left;
+}
+
+/* Cajas de los hospitales  */
+
+.hospital-box {
+  background: #ddd;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 0.8em;
+}
+
+.hospital-box p {
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.title-hospital {
+  font-weight: bold;
+}
+
+.hospital-box img {
+  float: left;
+  margin-right: 1em;
+  margin-left: 2em;
+  margin-top: 0.9em;
+}
+#twitter-col{
+    grid-area: twitter;
+}
+
+.col3 {
+  /* width: 30em; */
+
+  height: 300px;
+  background: none;
+  margin-top: 1em;
+}
+
+
+
+/* Tablet */
+
+
+
+@media screen and (max-width:768px) {
+ .wrapper {
+   grid-template-columns: 1fr;
+   grid-template-rows: 300px 810px 360px;
+  grid-template-areas: "fixture" "hospitales" "twitter";
+   grid-gap: 2em;
+ }
+
+ .header-logo img {
+   width: 82%;
+   padding-top: 2.5em;
+ }
+
+}
+
+/*Mobile XL*/
+@media screen and (max-width:425px){
+
+  .header-logo img {
+    width: 70%;
+    padding-top: 2.5em;
+  }
+
+}
+/*mOBILE MEDIUM*/
+@media screen and (max-width:375px){
+
+}
+
+/* MOBILE*/
+@media screen and (max-width:320px){
+
+}

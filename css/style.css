@@ -55,7 +55,7 @@ body {
   grid-gap: 1em;
   /* dividio en 5 fracciones */
   grid-template-columns: 1fr 2fr 3fr 3fr 1fr;
-  grid-template-rows:300px 480px;
+  grid-template-rows: 250px 480px;
   grid-template-areas:
   " . fixture hospitales twitter . "
   " . requisitos hospitales twitter . "
@@ -66,7 +66,7 @@ body {
   grid-area: .;
 }
 */
-#fixture-col{
+#fixture-col {
   grid-area: fixture;
 }
 .col1 {
@@ -83,11 +83,9 @@ body {
   margin-top: -0.7em;
 }
 
-/*
-.fixture-arg img {
-  float: right;
-
-} */
+#img-partidos {
+  width: 100%;
+}
 
 .col1 h4 {
   color: #2a90a9;
@@ -95,12 +93,21 @@ body {
   margin-bottom: 0.5em;
 }
 
-.col1 p {
-  margin: 0;
+#requisitos-col {
+    grid-area: requisitos;
 }
 
 .requisitos h4 {
-  margin-top: 3em;
+  margin-top: 0;
+}
+
+.requisitos ul {
+  margin-top: 0;
+  margin-left: -30px;
+}
+
+.certificado {
+  width: 12em;
 }
 
 /*
@@ -170,14 +177,47 @@ body {
 @media screen and (max-width:768px) {
  .wrapper {
    grid-template-columns: 1fr;
-   grid-template-rows: 300px 810px 360px;
-  grid-template-areas: "fixture" "hospitales" "twitter";
+   grid-template-rows: 380px 300px 810px 360px;
+  grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
    grid-gap: 2em;
  }
 
  .header-logo img {
-   width: 82%;
+   width: 60%;
    padding-top: 2.5em;
+ }
+
+ .fixture-arg {
+   text-align: center;
+ }
+
+ #img-partidos {
+   width: 65%;
+   margin: 0;
+ }
+
+.requisitos {
+  text-align: center;
+}
+
+.requisitos h2 {
+  margin: 0;
+}
+
+ .requisitos ul {
+   text-align: left;
+   margin-left: 3em;
+   font-size: 1.5em;
+ }
+
+ .certificado {
+   margin-left: 2em;
+   width: 300px;
+ }
+
+ #hospitales-col h2 {
+   margin-left: 1em;
+   margin-top: 2em;
  }
 
 }
@@ -185,18 +225,74 @@ body {
 /*Mobile XL*/
 @media screen and (max-width:425px){
 
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px 750px 360px;
+   grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
+    grid-gap: 1em;
+  }
+
   .header-logo img {
     width: 70%;
     padding-top: 2.5em;
+  }
+
+  .requisitos ul {
+    font-size: 1em;
+  }
+
+  .certificado {
+    width: 200px;
+  }
+
+  #hospitales-col h2 {
+    margin-left: 1em;
+    margin-top: 0;
   }
 
 }
 /*mOBILE MEDIUM*/
 @media screen and (max-width:375px){
 
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 290px 250px 760px 360px;
+   grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
+    grid-gap: 1em;
+  }
+
+  .header-logo img {
+    width: 95%;
+    padding-top: 2.5em;
+  }
+
+  #img-partidos {
+    width: 100%;
+    margin: 0;
+
+  }
+
 }
 
 /* MOBILE*/
 @media screen and (max-width:320px){
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px 820px 360px;
+   grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
+    grid-gap: 1em;
+  }
+
+  .header-logo img {
+    width: 95%;
+    padding-top: 2.5em;
+  }
+
+  #img-partidos {
+    width: 100%;
+    margin: 0;
+
+  }
 
 }

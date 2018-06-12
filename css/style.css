@@ -29,20 +29,13 @@ body {
   color: white;
 }
 
-.ley h1{
-  font-style: italic;
-  font-size: 1.5em;
-  margin: auto;
-  padding-top: 0.4em;
-}
-
 .ley p{
   width: 65%;
   margin: auto;
   padding-top: 1em;
   padding-bottom: 1em;
   font-size: 1.5em;
-  font-style: italic;
+  font-style: normal;
 }
 /*
 #second-line {
@@ -56,7 +49,7 @@ body {
   grid-gap: 1em;
   /* dividio en 5 fracciones */
   grid-template-columns: 1fr 2fr 3fr 3fr 1fr;
-  grid-template-rows: 270px 480px;
+  grid-template-rows: 270px 950px;
   grid-template-areas:
   " . fixture hospitales twitter . "
   " . requisitos hospitales twitter . "
@@ -118,6 +111,12 @@ body {
   height: 5em;
   background: #fff;
   margin-top: 1em;
+}
+
+.ciudad {
+  font-size: 1em;
+  margin-right: 1em;
+  text-align: right;
 }
 
 .col2 h2 {
@@ -209,7 +208,7 @@ body {
 @media screen and (max-width:768px) {
  .wrapper {
    grid-template-columns: 1fr;
-   grid-template-rows: 380px 300px 810px 360px;
+   grid-template-rows: 380px 300px 1010px 360px;
   grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
    grid-gap: 2em;
  }
@@ -259,7 +258,7 @@ body {
 
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 250px 750px 360px;
+    grid-template-rows: 250px 250px 960px 360px;
    grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
     grid-gap: 1em;
   }
@@ -288,7 +287,7 @@ body {
 
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 290px 250px 790px 360px;
+    grid-template-rows: 290px 250px 990px 360px;
    grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
     grid-gap: 1em;
   }
@@ -311,7 +310,7 @@ body {
 
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 250px 850px 380px;
+    grid-template-rows: 250px 250px 1050px 1050px;
    grid-template-areas: "fixture" "requisitos" "hospitales" "twitter";
     grid-gap: 1em;
   }
